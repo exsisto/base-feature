@@ -34,6 +34,13 @@ function base_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'configurable_timezones';
+  $strongarm->value = 1;
+  $export['configurable_timezones'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'cron_key';
   $strongarm->value = 'u44W-JB5fDMJI5LhDPMmo8iev68zF75-abXg9VbwwEo';
   $export['cron_key'] = $strongarm;
@@ -49,7 +56,7 @@ function base_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'css_js_query_string';
-  $strongarm->value = 'n13ua6';
+  $strongarm->value = 'n13ukj';
   $export['css_js_query_string'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -62,9 +69,54 @@ function base_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'drupal_private_key';
-  $strongarm->value = 'wA899rZaOa4jwfWdxiUNgY7Uj4RfBsL1ggSYAo1QveY';
-  $export['drupal_private_key'] = $strongarm;
+  $strongarm->name = 'date_first_day';
+  $strongarm->value = '0';
+  $export['date_first_day'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_long';
+  $strongarm->value = 'l, F j, Y - H:i';
+  $export['date_format_long'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_medium';
+  $strongarm->value = 'D, m/d/Y - H:i';
+  $export['date_format_medium'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_short';
+  $strongarm->value = 'M j Y - H:i';
+  $export['date_format_short'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'empty_timezone_message';
+  $strongarm->value = 0;
+  $export['empty_timezone_message'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_codecache';
+  $strongarm->value = array(
+    'base_feature' => array(
+      'variable' => 'b1608cce3e9f97c9cec171a98e330e01',
+      'filter' => 'e1ba718b9bb5189bfb3604dcce922498',
+      'language' => '584e7e2fa6d4888c3577f37e537ec33e',
+      'taxonomy' => 'dcbaffe2f734b63a1b42ea0991c9fef9',
+      'user_role' => '6658f5667f5e7ac5843b19164a6caf4a',
+      'dependencies' => '085213001ac8ac616eec433092a382dc',
+      'node' => 'cbf3749fed59a95e03733307918f69dd',
+    ),
+  );
+  $export['features_codecache'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -72,6 +124,13 @@ function base_feature_strongarm() {
   $strongarm->name = 'features_ignored_orphans';
   $strongarm->value = array();
   $export['features_ignored_orphans'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'features_semaphore';
+  $strongarm->value = array();
+  $export['features_semaphore'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -132,6 +191,13 @@ function base_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'image_toolkit';
+  $strongarm->value = 'gd';
+  $export['image_toolkit'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'install_profile';
   $strongarm->value = 'standard';
   $export['install_profile'] = $strongarm;
@@ -156,6 +222,25 @@ function base_feature_strongarm() {
   $strongarm->name = 'language_count';
   $strongarm->value = 2;
   $export['language_count'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_default';
+  $strongarm->value = (object) array(
+    'language' => 'en',
+    'name' => 'English',
+    'native' => 'English',
+    'direction' => 0,
+    'enabled' => 1,
+    'plurals' => 0,
+    'formula' => '',
+    'domain' => '',
+    'prefix' => '',
+    'weight' => 0,
+    'javascript' => '',
+  );
+  $export['language_default'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -273,6 +358,7 @@ function base_feature_strongarm() {
     'admin_devel' => 1392579820,
     'devel' => 1392579820,
     'devel_generate' => 1392579820,
+    'ckeditor' => 1392581262,
   );
   $export['module_filter_recent_modules'] = $strongarm;
 
@@ -330,25 +416,16 @@ function base_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'update_last_check';
-  $strongarm->value = 1392580773;
-  $export['update_last_check'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'update_notify_emails';
-  $strongarm->value = array(
-    0 => 'admin@social.dev',
-  );
-  $export['update_notify_emails'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'user_admin_role';
   $strongarm->value = '3';
   $export['user_admin_role'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_default_timezone';
+  $strongarm->value = '0';
+  $export['user_default_timezone'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
