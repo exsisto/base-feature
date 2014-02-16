@@ -236,13 +236,13 @@ admin/reports/status/php',
     'name' => 'Russian',
     'native' => 'Русский',
     'direction' => '0',
-    'enabled' => 1,
+    'enabled' => '1',
     'plurals' => '3',
     'formula' => '(((($n%10)==1)&&(($n%100)!=11))?(0):((((($n%10)>=2)&&(($n%10)<=4))&&((($n%100)<10)||(($n%100)>=20)))?(1):2))',
     'domain' => '',
     'prefix' => 'ru',
     'weight' => '0',
-    'javascript' => '',
+    'javascript' => 'di3O6OjsbkPsgo-IfTQIJezroQcaPdBsNBGKpPk13Fk',
   );
   $export['language_default'] = $strongarm;
 
@@ -415,7 +415,7 @@ admin/reports/status/php',
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'theme_default';
-  $strongarm->value = 'bartik';
+  $strongarm->value = 'omega_subtheme';
   $export['theme_default'] = $strongarm;
 
   $strongarm = new stdClass();
