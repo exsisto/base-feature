@@ -41,27 +41,6 @@ function base_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'cron_key';
-  $strongarm->value = 'u44W-JB5fDMJI5LhDPMmo8iev68zF75-abXg9VbwwEo';
-  $export['cron_key'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'cron_last';
-  $strongarm->value = 1392578641;
-  $export['cron_last'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'css_js_query_string';
-  $strongarm->value = 'n13ukj';
-  $export['css_js_query_string'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'date_default_timezone';
   $strongarm->value = 'Europe/Moscow';
   $export['date_default_timezone'] = $strongarm;
@@ -100,23 +79,6 @@ function base_feature_strongarm() {
   $strongarm->name = 'empty_timezone_message';
   $strongarm->value = 0;
   $export['empty_timezone_message'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'features_codecache';
-  $strongarm->value = array(
-    'base_feature' => array(
-      'variable' => 'b1608cce3e9f97c9cec171a98e330e01',
-      'filter' => 'e1ba718b9bb5189bfb3604dcce922498',
-      'language' => '584e7e2fa6d4888c3577f37e537ec33e',
-      'taxonomy' => 'dcbaffe2f734b63a1b42ea0991c9fef9',
-      'user_role' => '6658f5667f5e7ac5843b19164a6caf4a',
-      'dependencies' => '085213001ac8ac616eec433092a382dc',
-      'node' => 'cbf3749fed59a95e03733307918f69dd',
-    ),
-  );
-  $export['features_codecache'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
