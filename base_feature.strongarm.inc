@@ -242,7 +242,7 @@ admin/reports/status/php',
     'domain' => '',
     'prefix' => 'ru',
     'weight' => '0',
-    'javascript' => 'di3O6OjsbkPsgo-IfTQIJezroQcaPdBsNBGKpPk13Fk',
+    'javascript' => '',
   );
   $export['language_default'] = $strongarm;
 
