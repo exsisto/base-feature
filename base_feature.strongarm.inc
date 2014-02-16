@@ -13,6 +13,48 @@ function base_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'admin_language_default';
+  $strongarm->value = 'en';
+  $export['admin_language_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'admin_language_path_is_admin_paths';
+  $strongarm->value = array(
+    'admin' => 'node/*/edit
+node/*/delete
+node/*/revisions
+node/*/revisions/*/revert
+node/*/revisions/*/delete
+node/add
+node/add/*
+user/*/shortcuts
+admin
+admin/*
+batch
+taxonomy/term/*/edit
+user/*/cancel
+user/*/edit
+user/*/edit/*
+devel/*
+node/*/devel
+node/*/devel/*
+comment/*/devel
+comment/*/devel/*
+user/*/devel
+user/*/devel/*
+taxonomy/term/*/devel
+taxonomy/term/*/devel/*
+node/*/revisions/view/*/*',
+    'non_admin' => 'admin/structure/block/demo/*
+admin/reports/status/php',
+  );
+  $export['admin_language_path_is_admin_paths'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'admin_theme';
   $strongarm->value = 'seven';
   $export['admin_theme'] = $strongarm;
@@ -190,16 +232,16 @@ function base_feature_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'language_default';
   $strongarm->value = (object) array(
-    'language' => 'en',
-    'name' => 'English',
-    'native' => 'English',
-    'direction' => 0,
+    'language' => 'ru',
+    'name' => 'Russian',
+    'native' => 'Русский',
+    'direction' => '0',
     'enabled' => 1,
-    'plurals' => 0,
-    'formula' => '',
+    'plurals' => '3',
+    'formula' => '(((($n%10)==1)&&(($n%100)!=11))?(0):((((($n%10)>=2)&&(($n%10)<=4))&&((($n%100)<10)||(($n%100)>=20)))?(1):2))',
     'domain' => '',
-    'prefix' => '',
-    'weight' => 0,
+    'prefix' => 'ru',
+    'weight' => '0',
     'javascript' => '',
   );
   $export['language_default'] = $strongarm;
@@ -321,6 +363,7 @@ function base_feature_strongarm() {
     'devel' => 1392579820,
     'devel_generate' => 1392579820,
     'ckeditor' => 1392581262,
+    'admin_language' => 1392584493,
   );
   $export['module_filter_recent_modules'] = $strongarm;
 
